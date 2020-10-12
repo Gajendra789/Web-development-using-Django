@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+<h1> Student Register Page</h1>
+<table>
+<form action="{% url 'student' %}" method="POST">
+	{% csrf_token %}
+	Name<input type="text" name="name" placeholder="Enter Student Name"></input><br>
+	Age<input type="number" name="age" placeholder="Enter Student Age"></input><br>
+	Phone no<input type="number" name="phone" placeholder="Enter Student phone number"></input><br>
+	Email<input type="email" name="semail" placeholder="Enter Studetn email"></input><br>
+	Roll no<input type="text" name="rollno" placeholder="Enter Student Rollno"></input><br>
+	Gender<input type="text" name="gender" placeholder="Enter Student Gender"></input><br>
+	Address<input type="text" name="address" placeholder="Enter Student Address"></input><br>
+	username<input type="text" name="username" placeholder="Enter username"></input><br>
+	password<input type="text" name="password" placeholder="Enter password"></input><br>
+	<input type="submit" name="register">
+
+</form>
+</table>
+</center>
+</body>
+</html>

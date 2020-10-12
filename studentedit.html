@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+        body{                 
+        	background-color: powderblue;
+        }
+    </style>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<center>
+	<h1>Edit Student Details</h1>
+	<form action="{% url 'studentupdate' data.id %}" method="POST">
+		{% csrf_token %}
+		<div class="card">
+			<div class="card-header bg-primary">
+				Info Edit
+			</div>
+			<div class="card-body">
+				<tr><td>Student Name    </td><td><input type="text" name="a" value="{{data.S_name}}"></td></tr><br>
+				<tr><td>Student Age   </td><td><input type="number" name="b" value="{{data.S_age}}"></td></tr><br>
+				<tr><td>Student Phone    </td><td><input type="number" name="c" value="{{data.S_phone}}"></td></tr><br>
+				<tr><td>Student Email    </td><td><input type="email" name="d" value="{{data.S_email}}"></td></tr><br>
+				<tr><td>Student RollNo    </td><td><input type="text" name="e" value="{{data.S_rollno}}"></td></tr><br>
+				<tr><td>Student Gender    </td><td><input type="text" name="f" value="{{data.S_gender}}"></td></tr><br>
+				<tr><td>Student Address    </td><td><input type="text" name="g" value="{{data.S_address}}"></td></tr><br>
+				<tr><td>Student UserName    </td><td><input type="text" name="h" value="{{data.S_username}}"></td></tr><br>
+				<tr><td>Student Password    </td><td><input type="text" name="i" value="{{data.S_password}}"></td></tr><br>
+				<input type="submit" class="btn btn-info" name="save">
+			</div>
+
+		</div>
+	</form>
+	
+</center>
+</body>
+</html>
